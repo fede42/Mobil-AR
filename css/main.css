@@ -1,0 +1,29 @@
+#btnMain {
+    z-index: 1;
+    background-color: #FF0000;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  #containerMain {
+    z-index: 1;
+    background-color: #114A9B;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  #containerTrans {
+    z-index: 1;
+    background-color: #00000000;
+    text-align: center;
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+  }
