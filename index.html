@@ -31,7 +31,28 @@
     <!-- include A-Frame obviously -->
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
-  
+    <script>
+// detect target found
+exampleTarget.addEventListener("targetFound", event => {
+  console.log("target found");
+  showTargetStatusSection(); // Call the function to show the section
+});
+
+// detect target lost
+exampleTarget.addEventListener("targetLost", event => {
+  console.log("target lost");
+  hideTargetStatusSection(); // Call the function to hide the section
+});
+function showTargetStatusSection() {
+  const targetStatusSection = document.querySelector('#targetStatusSection');
+  targetStatusSection.style.display = 'block';
+}
+
+function hideTargetStatusSection() {
+  const targetStatusSection = document.querySelector('#targetStatusSection');
+  targetStatusSection.style.display = 'none';
+}
+    </script>
 </head>
 
 <body style='margin : 0px; overflow: hidden;'>
@@ -45,8 +66,8 @@
     </div>
     </div> -->
 
-    <!-- TCR-PRO panel 
-    <div class="d-flex flex-column align-items-center justify-content-between" style="height: 100vh;">
+    <!-- TCR-PRO panel -->
+    <div id="targetStatusSection" class="d-flex flex-column align-items-center justify-content-between" style="height: 100vh; display: none;">
         <button id="btnMain"
             style="position: absolute; top: 50px; left: 50%; transform: translateX(-50%); width: 80%;">Visualizar
             3D</button>
@@ -61,12 +82,12 @@
             style="position: absolute; bottom: 70px; left: 50%; transform: translateX(-50%); margin-bottom: -50px;">
             <img src="assets/Mobil_logo_color_b_2.svg" alt="Logo">
         </div>
-    </div> -->
+    </div>
 
     <!-- minimal loader shown until image descriptors are loaded -->
     <a-scene mindar-image="imageTargetSrc: assets/targets_Mobil1_Front.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
         <a-assets>
-      <a-asset-item id="avatarModel" src="assets/customized_Anim.glb"></a-asset-item>
+      <a-asset-item id="avatarModel" src="assets/MOBIL1_ATOMO.glb"></a-asset-item>
         </a-assets>
   
         <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
