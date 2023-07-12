@@ -87,7 +87,7 @@
     </div>-->
 
     <!-- minimal loader shown until image descriptors are loaded -->
-    <a-scene mindar-image="imageTargetSrc: assets/targets_Mobil1_Front.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: assets/targets_Mobil.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
         <a-assets>
       <a-asset-item id="avatarModel" src="assets/customized_Anim.glb"></a-asset-item>
         </a-assets>
@@ -96,8 +96,6 @@
   
         <a-entity mindar-image-target="targetIndex: 0">
           <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="1 1 1" src="#avatarModel" animation-mixer="clip: *; loop: repeat;"
-            animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
-            >
-        </a-entity>
+            animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-entity>
       </a-scene>
 </body>
