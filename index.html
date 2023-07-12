@@ -32,26 +32,27 @@
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
     <script>
-// detect target found
-exampleTarget.addEventListener("targetFound", event => {
-  console.log("target found");
-  showTargetStatusSection(); // Call the function to show the section
-});
+        /*
+        // detect target found
+        exampleTarget.addEventListener("targetFound", event => {
+        console.log("target found");
+        showTargetStatusSection(); // Call the function to show the section
+        });
 
-// detect target lost
-exampleTarget.addEventListener("targetLost", event => {
-  console.log("target lost");
-  hideTargetStatusSection(); // Call the function to hide the section
-});
-function showTargetStatusSection() {
-  const targetStatusSection = document.querySelector('#targetStatusSection');
-  targetStatusSection.style.display = 'block';
-}
+        // detect target lost
+        exampleTarget.addEventListener("targetLost", event => {
+        console.log("target lost");
+        hideTargetStatusSection(); // Call the function to hide the section
+        });
+        function showTargetStatusSection() {
+        const targetStatusSection = document.querySelector('#targetStatusSection');
+        targetStatusSection.style.display = 'block';
+        }
 
-function hideTargetStatusSection() {
-  const targetStatusSection = document.querySelector('#targetStatusSection');
-  targetStatusSection.style.display = 'none';
-}
+        function hideTargetStatusSection() {
+        const targetStatusSection = document.querySelector('#targetStatusSection');
+        targetStatusSection.style.display = 'none';
+        }*/
     </script>
 </head>
 
@@ -66,7 +67,7 @@ function hideTargetStatusSection() {
     </div>
     </div> -->
 
-    <!-- TCR-PRO panel -->
+    <!-- TCR-PRO panel 
     <div id="targetStatusSection" class="d-flex flex-column align-items-center justify-content-between" style="height: 100vh; display: none;">
         <button id="btnMain"
             style="position: absolute; top: 50px; left: 50%; transform: translateX(-50%); width: 80%;">Visualizar
@@ -82,7 +83,7 @@ function hideTargetStatusSection() {
             style="position: absolute; bottom: 70px; left: 50%; transform: translateX(-50%); margin-bottom: -50px;">
             <img src="assets/Mobil_logo_color_b_2.svg" alt="Logo">
         </div>
-    </div>
+    </div>-->
 
     <!-- minimal loader shown until image descriptors are loaded -->
     <a-scene mindar-image="imageTargetSrc: assets/targets_Mobil1_Front.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
@@ -96,6 +97,22 @@ function hideTargetStatusSection() {
           <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="1 1 1" src="#avatarModel"
             animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
           >
+          <div class="d-flex flex-column align-items-center justify-content-between" style="height: 100vh;">
+            <button id="btnMain"
+                style="position: absolute; top: 50px; left: 50%; transform: translateX(-50%); width: 80%;">Visualizar
+                3D</button>
+            <div id="containerMain"
+                style="position: absolute; bottom: 200px; left: 50%; transform: translateX(-50%); margin-bottom: -50px; width: 100%;">
+                <h5 style="padding: 0 20px;">TRC-PRO</h5>
+                <p style="padding: 0 20px;">Extra protección para tu motor</p>
+                <button id="btnMain" style="position: relative; left: 50%; transform: translateX(-50%); width: 80%;">Ver
+                    Video</button>
+            </div>
+            <div id="containerMain"
+                style="position: absolute; bottom: 70px; left: 50%; transform: translateX(-50%); margin-bottom: -50px;">
+                <img src="assets/Mobil_logo_color_b_2.svg" alt="Logo">
+            </div>
+        </div>
         </a-entity>
       </a-scene>
 </body>
