@@ -12,14 +12,18 @@ document.addEventListener("DOMContentLoaded", function () {
     // detect target found
     sceneEl.addEventListener("targetFound", event => {
         console.log("target found");
-        let element = document.getElementById("scanSection");
-        element.setAttribute("hidden", "hidden");
+        let scanPanel = document.getElementById("scanSection");
+        let mobilSuperPanel = document.getElementById("mobilSuperSection");
+        scanPanel.setAttribute("hidden", "hidden");
+        mobilSuperPanel.removeAttribute("hidden");
     });
     // detect target lost
     sceneEl.addEventListener("targetLost", event => {
         console.log("target lost");
-        let element = document.getElementById("scanSection");
-        element.removeAttribute("hidden");
+        let scanPanel = document.getElementById("scanSection");
+        let mobilSuperPanel = document.getElementById("mobilSuperSection");
+        mobilSuperPanel.setAttribute("hidden", "hidden");
+        scanPanel.removeAttribute("hidden");
     });
     // arError event triggered when something went wrong. Mostly browser compatbility issue
     sceneEl.addEventListener("arError", (event) => {
