@@ -31,23 +31,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-const target0 = document.getElementById('target0');
-const target2 = document.getElementById('target2');
+const btn3D = document.getElementById('btn3D');
 
-target0.addEventListener('mindar-image-target-found', () => {
-  console.log('Target 0 found');
-});
-
-target0.addEventListener('mindar-image-target-lost', () => {
-  console.log('Target 0 lost');
-});
-
-target2.addEventListener('mindar-image-target-found', () => {
-    let element = document.getElementById("mobilSuperSection");
-    element.removeAttribute("hidden");
-});
-
-target2.addEventListener('mindar-image-target-lost', () => {
-    let element = document.getElementById("mobilSuperSection");
-    element.setAttribute("hidden", "hidden");
-});
+  // Add a click event listener to the button
+  btn3D.addEventListener('click', () => {
+    // Redirect to the specified link
+    window.location.href = 'mobil-super.html';
+  });

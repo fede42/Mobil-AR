@@ -1,14 +1,14 @@
-#btnMain {
-    z-index: 1;
-    background-color: #FF0000;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-  }
+.button-main {
+  z-index: 1;
+  background-color: #FF0000;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
   
-  #containerMain {
+.containerMain {
     z-index: 1;
     background-color: #114A9B;
     color: white;
@@ -17,7 +17,7 @@
     border-radius: 10px;
   }
   
-  #containerTrans {
+.containerTrans {
     z-index: 1;
     background-color: #00000000;
     text-align: center;
