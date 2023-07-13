@@ -31,10 +31,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-const btn3D = document.getElementById('btn3D');
-
-  // Add a click event listener to the button
-  btn3D.addEventListener('click', () => {
-    // Redirect to the specified link
+let btn3D = button => {
     window.location.href = 'mobil-super.html';
-  });
+}
+
+let btnVideo = button => {
+    window.location.href = 'https://www.youtube.com/live/AJ7lbqyLbX8?feature=share';
+}
