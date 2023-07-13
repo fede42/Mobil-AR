@@ -32,42 +32,27 @@
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
-    <script>
-        /*
-        // detect target found
-        exampleTarget.addEventListener("targetFound", event => {
-        console.log("target found");
-        showTargetStatusSection(); // Call the function to show the section
-        });
-
-        // detect target lost
-        exampleTarget.addEventListener("targetLost", event => {
-        console.log("target lost");
-        hideTargetStatusSection(); // Call the function to hide the section
-        });
-        function showTargetStatusSection() {
-        const targetStatusSection = document.querySelector('#targetStatusSection');
-        targetStatusSection.style.display = 'block';
-        }
-
-        function hideTargetStatusSection() {
-        const targetStatusSection = document.querySelector('#targetStatusSection');
-        targetStatusSection.style.display = 'none';
-        }*/
-    </script>
+    <script src="main.js"> </script>
 </head>
 
 <body style='margin : 0px; overflow: hidden;'>
-    <!-- Scan panel
-    <div class="d-flex flex-column align-items-center justify-content-between" style="height: 100vh;">
-    <div id="containerTrans" style="position: absolute; top: 50px; left: 50%; transform: translateX(-50%); width: 80%;">
-        <h3>Escanea tu producto</h3>
-    </div>
-    <div id="containerMain" style="position: absolute; bottom: 70px; left: 50%; transform: translateX(-50%); margin-bottom: -50px;">
-        <img src="assets/Mobil_logo_color_b_2.svg" alt="Logo">
-    </div>
-    </div> -->
+    <!-- Scan panel-->
+    <div class="d-flex flex-column align-items-center justify-content-between" style="height: 100vh;"></class>
+    <button onclick="toggle(this)">Hide Section</button>  </div>
+    <section id="scanSection">
+        <div class="d-flex flex-column align-items-center justify-content-between" style="height: 100vh;">
+            <div id="containerTrans"
+                style="position: absolute; top: 50px; left: 50%; transform: translateX(-50%); width: 80%;">
+                <h3>Escanea tu producto</h3>
+            </div>
+            <div id="containerMain"
+                style="position: absolute; bottom: 70px; left: 50%; transform: translateX(-50%); margin-bottom: -50px;">
+                <!-- <img src="assets/Mobil_logo_color_b_2.svg" alt="Logo"> -->
+            </div>
+        </div>
+    </section>
 
+    
     <!-- TCR-PRO panel 
     <div id="targetStatusSection" class="d-flex flex-column align-items-center justify-content-between" style="height: 100vh; display: none;">
         <button id="btnMain"
