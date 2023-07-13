@@ -37,8 +37,6 @@
 
 <body style='margin : 0px; overflow: hidden;'>
     <!-- Scan panel-->
-    <div class="d-flex flex-column align-items-center justify-content-between" style="height: 100vh;"></class>
-    <button onclick="toggle(this)">Hide Section</button>  </div>
     <section id="scanSection">
         <div class="d-flex flex-column align-items-center justify-content-between" style="height: 100vh;">
             <div id="containerTrans"
@@ -53,23 +51,26 @@
     </section>
 
     
-    <!-- TCR-PRO panel 
-    <div id="targetStatusSection" class="d-flex flex-column align-items-center justify-content-between" style="height: 100vh; display: none;">
-        <button id="btnMain"
-            style="position: absolute; top: 50px; left: 50%; transform: translateX(-50%); width: 80%;">Visualizar
-            3D</button>
-        <div id="containerMain"
-            style="position: absolute; bottom: 200px; left: 50%; transform: translateX(-50%); margin-bottom: -50px; width: 100%;">
-            <h5 style="padding: 0 20px;">TRC-PRO</h5>
-            <p style="padding: 0 20px;">Extra protección para tu motor</p>
-            <button id="btnMain" style="position: relative; left: 50%; transform: translateX(-50%); width: 80%;">Ver
-                Video</button>
+    <!-- TCR-PRO panel -->
+    <section id="mobilSuperSection" hidden="hidden">
+        <div id="targetStatusSection" class="d-flex flex-column align-items-center justify-content-between"
+            style="height: 100vh; display: none;">
+            <button id="btnMain"
+                style="position: absolute; top: 50px; left: 50%; transform: translateX(-50%); width: 80%;">Visualizar
+                3D</button>
+            <div id="containerMain"
+                style="position: absolute; bottom: 200px; left: 50%; transform: translateX(-50%); margin-bottom: -50px; width: 100%;">
+                <h5 style="padding: 0 20px;">TRC-PRO</h5>
+                <p style="padding: 0 20px;">Extra protección para tu motor</p>
+                <button id="btnMain" style="position: relative; left: 50%; transform: translateX(-50%); width: 80%;">Ver
+                    Video</button>
+            </div>
+            <div id="containerMain"
+                style="position: absolute; bottom: 70px; left: 50%; transform: translateX(-50%); margin-bottom: -50px;">
+                <img src="assets/Mobil_logo_color_b_2.svg" alt="Logo">
+            </div>
         </div>
-        <div id="containerMain"
-            style="position: absolute; bottom: 70px; left: 50%; transform: translateX(-50%); margin-bottom: -50px;">
-            <img src="assets/Mobil_logo_color_b_2.svg" alt="Logo">
-        </div>
-    </div>-->
+    </section>
 
     <!-- minimal loader shown until image descriptors are loaded -->
     <a-scene mindar-image="imageTargetSrc: assets/targets_Mobil.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
@@ -80,12 +81,12 @@
   
         <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
   
-        <a-entity mindar-image-target="targetIndex: 0">
+        <a-entity mindar-image-target="targetIndex: 0" id="target0">
           <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="1 1 1" src="#model0" animation-mixer="clip: *; loop: repeat;"
             animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
         </a-entity>
 
-        <a-entity mindar-image-target="targetIndex: 2">
+        <a-entity mindar-image-target="targetIndex: 2" id="target2">
             <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="1 1 1" src="#model1" animation-mixer="clip: *; loop: repeat;"
               animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
           </a-entity>

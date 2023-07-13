@@ -1,15 +1,3 @@
-let toggle = button => {
-    let element = document.getElementById("scanSection");
-    let hidden = element.getAttribute("hidden");
-
-    if (hidden) {
-        element.removeAttribute("hidden");
-        button.innerText = "Hide Section";
-    } else {
-        element.setAttribute("hidden", "hidden");
-        button.innerText = "Show Section";
-    }
-}
 
 document.addEventListener("DOMContentLoaded", function () {
     const sceneEl = document.querySelector('a-scene');
@@ -37,4 +25,25 @@ document.addEventListener("DOMContentLoaded", function () {
     sceneEl.addEventListener("arError", (event) => {
         console.log("ar error");
     });
+});
+
+const target0 = document.getElementById('target0');
+const target2 = document.getElementById('target2');
+
+target0.addEventListener('mindar-image-target-found', () => {
+  console.log('Target 0 found');
+});
+
+target0.addEventListener('mindar-image-target-lost', () => {
+  console.log('Target 0 lost');
+});
+
+target2.addEventListener('mindar-image-target-found', () => {
+    let element = document.getElementById("mobilSuperSection");
+    element.removeAttribute("hidden");
+});
+
+target2.addEventListener('mindar-image-target-lost', () => {
+    let element = document.getElementById("mobilSuperSection");
+    element.setAttribute("hidden", "hidden");
 });
