@@ -1,5 +1,6 @@
 // Get a reference to the form element
 const form = document.getElementById('myForm');
+const submitButton = form.querySelector('button[type="submit"]');
 
 // Add a submit event listener to the form
 form.addEventListener('submit', (event) => {
@@ -37,7 +38,9 @@ form.addEventListener('submit', (event) => {
     }
 
     // Send your web request using the URL
-    fetch(url)
+    fetch(url,{
+        mode: 'no-cors', // Set the mode to 'no-cors'
+        })
         .then(response => {
             // Handle the response here
 
