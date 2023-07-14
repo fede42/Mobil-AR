@@ -5,6 +5,9 @@ const form = document.getElementById('myForm');
 form.addEventListener('submit', (event) => {
     event.preventDefault(); // Prevent the default form submission
 
+    // Disable the submit button to prevent multiple submissions
+    submitButton.disabled = true;
+
     // Get the form input values
     const firstName = form.elements['firstname'].value;
     const lastName = form.elements['lastname'].value;
@@ -25,7 +28,7 @@ form.addEventListener('submit', (event) => {
 
     if (firstName.trim() === '' || lastName.trim() === '' || email.trim() === '' || model.trim() === '' || year.trim() === '' || kilometers.trim() === '') {
         // Show an error message or perform any necessary validation handling
-        console.log('Please fill in all fields');
+        console.log('Please fill in all fields'); 
         formMessage.removeAttribute("hidden");
         return; // Stop further execution
     }else{
@@ -37,8 +40,15 @@ form.addEventListener('submit', (event) => {
     fetch(url)
         .then(response => {
             // Handle the response here
+
+            // Reset the form fields
+            form.reset();
+
+            // Re-enable the submit button
+            submitButton.disabled = false;
         })
         .catch(error => {
             // Handle any error that occurs during the request
+            submitButton.disabled = false;
         });
 });
