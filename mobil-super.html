@@ -37,7 +37,7 @@
     <script src="main.js"> </script>
 </head>
 <body>
-    <div class="d-flex flex-column align-items-center justify-content-between">
+    <div class="d-flex flex-column align-items-center justify-content-between" style="background: linear-gradient(to top, #111217, #96a7bb)">
         <model-viewer
           src="assets/MOBIL_SUPER.glb"
           ar
@@ -46,8 +46,12 @@
           shadow-intensity="1"
           camera-controls
           touch-action="pan-y"
-          style="height: 100vh;"
+          style="height: 100vh; width: 100vh;"
         ></model-viewer>
+        <div class="containerMain"
+                style="position: absolute; bottom: 70px; left: 50%; transform: translateX(-50%); margin-bottom: -50px;">
+                <img src="assets/Mobil_logo_color_b_2.svg" alt="Logo">
+        </div>
     </div>
 </body>
 
