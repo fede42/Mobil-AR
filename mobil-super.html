@@ -28,19 +28,27 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <!-- include A-Frame obviously -->
-    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <!-- 3D Model Viewer -->
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"
+    ></script>
+
     <script src="main.js"> </script>
 </head>
 <body>
-    <a-scene>
-        <a-assets>
-          <a-asset-item id="avatarModel" src="assets/MOBIL_SUPER.glb"></a-asset-item>
-        </a-assets>
-        
-        <a-entity gltf-model="#avatarModel" position="0 0 0"></a-entity>
-      </a-scene>
+    <div class="d-flex flex-column align-items-center justify-content-between">
+        <model-viewer
+          src="assets/MOBIL_SUPER.glb"
+          ar
+          environment-image=""
+          poster=""
+          shadow-intensity="1"
+          camera-controls
+          touch-action="pan-y"
+          style="height: 100vh;"
+        ></model-viewer>
+    </div>
 </body>
 
 </html>
