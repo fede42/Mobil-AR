@@ -38,3 +38,7 @@ let btn3D = button => {
 let btnVideo = button => {
     window.location.href = 'https://www.youtube.com/live/AJ7lbqyLbX8?feature=share';
 }
+
+let btnBack = button => {
+    window.location.href = 'index.html';
+}

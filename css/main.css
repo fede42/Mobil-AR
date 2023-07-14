@@ -7,6 +7,20 @@
   border-radius: .7rem;
   cursor: pointer;
 }
+
+.button-back {
+  z-index: 2;
+  background-color: #FF0000;
+  color: white;
+  padding-left: 1.8rem;
+  padding-right: 2rem;
+  padding-top: 0rem;
+  padding-bottom: .3rem;
+  font-size: 3rem;
+  border: none;
+  border-radius: .7rem;
+  cursor: pointer;
+}
   
 .containerMain {
     z-index: 1;
