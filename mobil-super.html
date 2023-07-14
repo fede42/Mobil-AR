@@ -30,9 +30,17 @@
         crossorigin="anonymous"></script>
     <!-- include A-Frame obviously -->
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="main.js"> </script>
 </head>
+<body>
+    <a-scene>
+        <a-assets>
+          <a-asset-item id="avatarModel" src="assets/MOBIL_SUPER.glb"></a-asset-item>
+        </a-assets>
+        
+        <a-entity gltf-model="#avatarModel" position="0 0 -5"></a-entity>
+      </a-scene>
+</body>
 
 </html>
