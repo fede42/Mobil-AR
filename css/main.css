@@ -1,10 +1,10 @@
 @font-face {
   font-family: CustomFont;
-  src: url("https://github.com/fede42/Mobil-AR/blob/main/fonts/EMprint%20Regular.ttf") format('truetype');
+  src: url("fonts/EMprintRegular.ttf");
 }
 
-body {
-  font-family: CustomFont, sans-serif;
+p,h1,h2,h3,h4,h5,h6 {
+  font-family: CustomFont;
 }
 
 .button-main {
