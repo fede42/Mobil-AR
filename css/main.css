@@ -1,19 +1,19 @@
 @font-face {
   font-family: 'EMprint';
-  src: url('EMprint-Regular.eot');
-  src: url('EMprint-Regular.eot?#iefix') format('embedded-opentype'),
-      url('EMprint-Regular.woff2') format('woff2'),
-      url('EMprint-Regular.woff') format('woff'),
-      url('EMprint-Regular.ttf') format('truetype'),
-      url('EMprint-Regular.svg#EMprint-Regular') format('svg');
+  src: url('css/fonts/EMprint-Regular.eot');
+  src: url('css/fonts/EMprint-Regular.eot?#iefix') format('embedded-opentype'),
+      url('css/fonts/EMprint-Regular.woff2') format('woff2'),
+      url('css/fonts/EMprint-Regular.woff') format('woff'),
+      url('css/fonts/EMprint-Regular.ttf') format('truetype'),
+      url('css/fonts/EMprint-Regular.svg#EMprint-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
-p,h1,h2,h3,h4,h5,h6 {
-  font-family: 'EMprint'; font-weight: normal; font-style: normal;
-}
+p,h1,h2,h3,h4,h5,h6,form {
+  font: inherit;
+  }
 
 .button-main {
   z-index: 2;
