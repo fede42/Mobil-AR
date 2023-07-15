@@ -1,3 +1,12 @@
+@font-face {
+  font-family: CustomFont;
+  src: url("fonts/EMprint Regular.ttf") format('truetype');
+}
+
+body {
+  font-family: CustomFont, sans-serif;
+}
+
 .button-main {
   z-index: 2;
   background-color: #FF0000;
@@ -29,7 +38,13 @@
     padding: 10px;
     border: none;
     border-radius: 10px;
-  }
+}
+
+.containerForm{
+  z-index: 1;
+  background-color: #114A9B;
+  color: white;
+}
   
 .containerTrans {
     z-index: 1;
