@@ -13,17 +13,17 @@ document.addEventListener("DOMContentLoaded", function () {
     sceneEl.addEventListener("targetFound", event => {
         console.log("target found");
         let scanPanel = document.getElementById("scanSection");
-        let mobilSuperPanel = document.getElementById("mobilSuperSection");
         scanPanel.setAttribute("hidden", "hidden");
-        mobilSuperPanel.removeAttribute("hidden");
+        //let mobilSuperPanel = document.getElementById("mobilSuperSection");
+        //mobilSuperPanel.removeAttribute("hidden");
     });
     // detect target lost
     sceneEl.addEventListener("targetLost", event => {
         console.log("target lost");
         let scanPanel = document.getElementById("scanSection");
-        let mobilSuperPanel = document.getElementById("mobilSuperSection");
-        mobilSuperPanel.setAttribute("hidden", "hidden");
         scanPanel.removeAttribute("hidden");
+        //let mobilSuperPanel = document.getElementById("mobilSuperSection");
+        //mobilSuperPanel.setAttribute("hidden", "hidden");
     });
     // arError event triggered when something went wrong. Mostly browser compatbility issue
     sceneEl.addEventListener("arError", (event) => {
@@ -42,3 +42,15 @@ let btnVideo = button => {
 let btnBack = button => {
     window.location.href = 'index.html';
 }
+
+const webButton = document.querySelector("#web-button");
+
+setTimeout(() => {
+    webButton.setAttribute("visible", true);
+}, 300);
+
+let currentTab = '';
+webButton.addEventListener('click', function (evt) {
+    text.setAttribute("value", "mobil-1.html");
+    currentTab = 'web';
+});
