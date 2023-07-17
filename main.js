@@ -38,12 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     AFRAME.registerComponent('target0', {
         init: function () {
-            this.el.addEventListener('targetFound', event => {
+            sceneEl.addEventListener('targetFound', event => {
                 console.log("target found");
                 let mobilSuperPanel = document.getElementById("mobilSuperSection");
                 mobilSuperPanel.removeAttribute("hidden");
             });
-            this.el.addEventListener('targetLost', event => {
+            sceneEl.addEventListener('targetLost', event => {
                 console.log("target found");
                 let mobilSuperPanel = document.getElementById("mobilSuperSection");
                 mobilSuperPanel.setAttribute("hidden", "hidden");
