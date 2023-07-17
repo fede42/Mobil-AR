@@ -14,16 +14,16 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("target found");
         let scanPanel = document.getElementById("scanSection");
         scanPanel.setAttribute("hidden", "hidden");
-        let mobilSuperPanel = document.getElementById("mobilSuperSection");
-        mobilSuperPanel.removeAttribute("hidden");
+        //let mobilSuperPanel = document.getElementById("mobilSuperSection");
+        //mobilSuperPanel.removeAttribute("hidden");
     });
     // detect target lost
     sceneEl.addEventListener("targetLost", event => {
         console.log("target lost");
         let scanPanel = document.getElementById("scanSection");
         scanPanel.removeAttribute("hidden");
-        let mobilSuperPanel = document.getElementById("mobilSuperSection");
-        mobilSuperPanel.setAttribute("hidden", "hidden");
+        //let mobilSuperPanel = document.getElementById("mobilSuperSection");
+        //mobilSuperPanel.setAttribute("hidden", "hidden");
     });
     // arError event triggered when something went wrong. Mostly browser compatbility issue
     sceneEl.addEventListener("arError", (event) => {
@@ -37,21 +37,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-/*document.registerComponent('target0', {
+document.registerComponent('target0', {
     init: function () {
-        this.el.addEventListener('targetFound', event => {
+        const sceneEl = document.querySelector('a-scene');
+        sceneEl.addEventListener('targetFound', event => {
             console.log("target found");
             let mobilSuperPanel = document.getElementById("mobilSuperSection");
             mobilSuperPanel.removeAttribute("hidden");
         });
-        this.el.addEventListener('targetLost', event => {
+        sceneEl.addEventListener('targetLost', event => {
             console.log("target found");
             let mobilSuperPanel = document.getElementById("mobilSuperSection");
             mobilSuperPanel.setAttribute("hidden", "hidden");
         });
         //this.el.emit('targetFound');
     }
-});*/
+});
 
 let btn3D = button => {
     window.location.href = 'mobil-super.html';
