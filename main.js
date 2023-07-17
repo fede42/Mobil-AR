@@ -35,22 +35,22 @@ document.addEventListener("DOMContentLoaded", function () {
     webButton.addEventListener('click', function (event) {
         window.location.href = "mobil-1.html";
     });
+});
 
-    AFRAME.registerComponent('target0', {
-        init: function () {
-            sceneEl.addEventListener('targetFound', event => {
-                console.log("target found");
-                let mobilSuperPanel = document.getElementById("mobilSuperSection");
-                mobilSuperPanel.removeAttribute("hidden");
-            });
-            sceneEl.addEventListener('targetLost', event => {
-                console.log("target found");
-                let mobilSuperPanel = document.getElementById("mobilSuperSection");
-                mobilSuperPanel.setAttribute("hidden", "hidden");
-            });
-            //this.el.emit('targetFound');
-        }
-    });
+document.registerComponent('target0', {
+    init: function () {
+        this.el.addEventListener('targetFound', event => {
+            console.log("target found");
+            let mobilSuperPanel = document.getElementById("mobilSuperSection");
+            mobilSuperPanel.removeAttribute("hidden");
+        });
+        this.el.addEventListener('targetLost', event => {
+            console.log("target found");
+            let mobilSuperPanel = document.getElementById("mobilSuperSection");
+            mobilSuperPanel.setAttribute("hidden", "hidden");
+        });
+        //this.el.emit('targetFound');
+    }
 });
 
 let btn3D = button => {
