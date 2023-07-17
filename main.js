@@ -14,9 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("target found");
         let scanPanel = document.getElementById("scanSection");
         scanPanel.setAttribute("hidden", "hidden");
-        setTimeout(() => {
-            showInfo();
-        }, 300);
         //let mobilSuperPanel = document.getElementById("mobilSuperSection");
         //mobilSuperPanel.removeAttribute("hidden");
     });
@@ -32,6 +29,12 @@ document.addEventListener("DOMContentLoaded", function () {
     sceneEl.addEventListener("arError", (event) => {
         console.log("ar error");
     });
+
+    const webButton = document.querySelector("#web-button");
+
+    webButton.addEventListener('click', function (event) {
+        window.location.href = "mobil-1.html";
+    });
 });
 
 let btn3D = button => {
@@ -44,12 +47,4 @@ let btnVideo = button => {
 
 let btnBack = button => {
     window.location.href = 'index.html';
-}
-
-const showInfo = () => {
-    const webButton = document.querySelector("#web-button");
-
-    webButton.addEventListener('click', function (evt) {
-        window.location.href = "mobil-1.html";
-    });
 }
