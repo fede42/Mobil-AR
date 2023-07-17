@@ -11,6 +11,11 @@
   font-display: swap;
 }
 
+@keyframes move {
+	0%, 100% { top: 0% }
+	50% { top: calc(100% - 10px) }
+}
+
 .button-main {
   z-index: 2;
   background-color: #FF0000;

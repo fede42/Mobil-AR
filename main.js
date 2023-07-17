@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("target found");
         let scanPanel = document.getElementById("scanSection");
         scanPanel.setAttribute("hidden", "hidden");
+        setTimeout(() => {
+            showInfo();
+        }, 300);
         //let mobilSuperPanel = document.getElementById("mobilSuperSection");
         //mobilSuperPanel.removeAttribute("hidden");
     });
@@ -43,14 +46,24 @@ let btnBack = button => {
     window.location.href = 'index.html';
 }
 
-const webButton = document.querySelector("#web-button");
+const showInfo = () => {
+    let y = 0;
+    const webButton = document.querySelector("#web-button");
+    const text = document.querySelector("#text");
 
-setTimeout(() => {
-    webButton.setAttribute("visible", true);
-}, 300);
+    setTimeout(() => {
+        webButton.setAttribute("visible", true);
+    }, 300);
 
-let currentTab = '';
-webButton.addEventListener('click', function (evt) {
-    text.setAttribute("value", "mobil-1.html");
-    currentTab = 'web';
-});
+    let currentTab = '';
+    webButton.addEventListener('click', function (evt) {
+        text.setAttribute("value", "mobil-1.html");
+        currentTab = 'web';
+    });
+
+    text.addEventListener('click', function (evt) {
+        if (currentTab === 'web') {
+            window.location.href = "mobil-1.html";
+        }
+    });
+}
