@@ -99,9 +99,9 @@
     </section>  
 
     <!-- minimal loader shown until image descriptors are loaded -->
-    <a-scene mindar-image="imageTargetSrc: assets/targets_Mobil.mind;" color-space="sRGB"
-        renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
-        device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: assets/targets_Mobil.mind;showStats: false; uiScanning: #example-scanning-overlay;"
+        embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" 
+        vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
         <a-assets>
             <a-asset-item id="model0" src="assets/MOBIL1_ATOMO.glb"></a-asset-item>
             <a-asset-item id="model1" src="assets/ATOMO.glb"></a-asset-item>
