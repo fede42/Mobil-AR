@@ -47,23 +47,9 @@ let btnBack = button => {
 }
 
 const showInfo = () => {
-    let y = 0;
     const webButton = document.querySelector("#web-button");
-    const text = document.querySelector("#text");
 
-    setTimeout(() => {
-        webButton.setAttribute("visible", true);
-    }, 300);
-
-    let currentTab = '';
     webButton.addEventListener('click', function (evt) {
-        text.setAttribute("value", "mobil-1.html");
-        currentTab = 'web';
-    });
-
-    text.addEventListener('click', function (evt) {
-        if (currentTab === 'web') {
-            window.location.href = "mobil-1.html";
-        }
+        window.location.href = "mobil-1.html";
     });
 }
