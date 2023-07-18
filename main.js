@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.registerComponent('target0', {
+AFRAME.registerComponent('target0', {
     init: function () {
         const sceneEl = document.querySelector('a-scene');
         sceneEl.addEventListener('targetFound', event => {
