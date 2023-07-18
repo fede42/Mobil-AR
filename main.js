@@ -69,3 +69,9 @@ let btnBack = button => {
 let btnForm = button => {
     window.location.href = 'form.html';
 }
+
+const webButton = document.querySelector("#web-button");
+
+webButton.addEventListener('click', function (evt) {
+    window.location.href="https://softmind.tech";
+  });
