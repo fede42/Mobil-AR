@@ -55,23 +55,17 @@ AFRAME.registerComponent('target0', {
 });
 
 let btn3D = button => {
-    window.location.href = 'mobil-super.html';
+    window.location.href = 'index-3D.html';
 }
 
 let btnVideo = button => {
     window.location.href = 'https://www.youtube.com/@LubricanteMobilChile';
 }
 
-let btnBack = button => {
-    window.location.href = 'index.html';
+let btnBack3D = button => {
+    window.location.href = 'index-3D.html';
 }
 
 let btnForm = button => {
     window.location.href = 'form.html';
 }
-
-const webButton = document.querySelector("#web-button");
-
-webButton.addEventListener('click', function (evt) {
-    window.location.href="https://softmind.tech";
-  });

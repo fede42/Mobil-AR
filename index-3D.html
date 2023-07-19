@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobil AR</title>
+    <link rel="icon" href="" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous" />
+    <!-- Extra CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        let btnBack = button => {window.location.href = 'index.html';}
+    </script>
+</head>
+
+<body style='margin : 0px; overflow: hidden; background-color: #114A9B;
+color: white;'>
+    <div class="d-flex flex-column align-items-center justify-content-between">
+        <button onclick="btnBack(this)" class="button-backTrans">&#8249</button>
+        <h4 style="padding-top: 3.6rem;">Selecciona un modelo</h5>
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="mobil-1.html">
+                    <img src="image1.jpg" alt="Mobil 1" class="img-fluid">
+                </a>
+            </div>
+            <!-- <div class="col-sm-6">
+                <a href="#">
+                    <img src="image2.jpg" alt="Image 2" class="img-fluid">
+                </a>
+            </div> -->
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="mobil-super.html">
+                    <img src="image3.jpg" alt="Mobil Super" class="img-fluid">
+                </a>
+            </div>
+            <!-- <div class="col-sm-6">
+                <a href="#">
+                    <img src="image4.jpg" alt="Image 4" class="img-fluid">
+                </a>
+            </div> -->
+        </div>
+        <div class="row" style="position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);">
+                <img src="assets/Mobil_logo_color_b_2.svg" alt="Logo">
+            </div>
+    </div>
+</body>
+
+</html>

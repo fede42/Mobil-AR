@@ -33,11 +33,14 @@
       type="module"
       src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"
     ></script>
-
-    <script src="main.js"> </script>
+    <script>
+        let btnBack3D = button => {window.location.href = 'index-3D.html';}
+    </script>
 </head>
-<body>
+<body style="color: white;">
     <div class="d-flex flex-column align-items-center justify-content-between" style="background: linear-gradient(to top, #111217, #96a7bb)">
+        <button onclick="btnBack3D(this)" class="button-backTrans">&#8249</button>
+        <h4 style="padding-top: 3.6rem;">Mobil 1</h5>
         <model-viewer
           src="assets/MOBIL1.glb"
           ar
@@ -48,8 +51,6 @@
           touch-action="pan-y"
           style="height: 100vh; width: 100vw;"
         ></model-viewer>
-        <button onclick="btnBack(this)" class="button-back"
-                style="position: absolute; bottom: 6rem; left: 50%; transform: translateX(-50%);">&#8249</button>
         <div class="containerMain"
                 style="position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);">
                 <img src="assets/Mobil_logo_color_b_2.svg" alt="Logo">
