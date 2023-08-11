@@ -1,12 +1,29 @@
 @font-face {
   font-family: 'EMprint';
-  src: url('fonts/EMprint-Regular.eot');
-  src: url('fonts/EMprint-Regular.eot?#iefix') format('embedded-opentype'),
-      url('fonts/EMprint-Regular.woff2') format('woff2'),
-      url('fonts/EMprint-Regular.woff') format('woff'),
+  src: url('fonts/EMprint-Semibold.woff2') format('woff2'),
+      url('fonts/EMprint-Semibold.ttf') format('truetype'),
+      url('fonts/EMprint-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EMprint';
+  src: url('fonts/EMprint-Regular.woff2') format('woff2'),
       url('fonts/EMprint-Regular.ttf') format('truetype'),
-      url('fonts/EMprint-Regular.svg#EMprint-Regular') format('svg');
+      url('fonts/EMprint-Regular.woff') format('woff');
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EMprint';
+  src: url('fonts/EMprint-Bold.woff2') format('woff2'),
+      url('fonts/EMprint-Bold.ttf') format('truetype'),
+      url('fonts/EMprint-Bold.woff') format('woff');
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
@@ -114,12 +131,6 @@
 }
   
 p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 form,
 .navbar-brand,
 .navbar-nav .nav-link,
@@ -127,4 +138,13 @@ form,
 .card-text,
 .list-group-item {
     font-family: 'EMprint'; font-weight: normal; font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: 'EMprint'; font-weight: 600; font-style: normal;
 }
