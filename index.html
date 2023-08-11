@@ -100,7 +100,7 @@
 
     <!-- minimal loader shown until image descriptors are loaded -->
     <a-scene mindar-image="imageTargetSrc: assets/targets_Mobil.mind;" color-space="sRGB"
-    renderer="antialias: true; colorManagement: true; physicallyCorrectLights: false;" vr-mode-ui="enabled: false"
+    renderer="antialias: true; colorManagement: true; physicallyCorrectLights: true;" vr-mode-ui="enabled: false"
     device-orientation-permission-ui="enabled: false">
         <a-assets>
             <a-asset-item id="model0" src="assets/PISTON.glb"></a-asset-item>
@@ -110,6 +110,8 @@
 
         <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable">
         </a-camera>
+        
+        <a-light type="ambient" color="#FFFFFF" intensity="0.5"></a-light>
 
         <a-entity mindar-image-target="targetIndex: 1" id="target0">
             <a-gltf-model rotation="0 0 0 " position="0 -.5 0.1" scale=".7 .7 .7" src="#model0"
