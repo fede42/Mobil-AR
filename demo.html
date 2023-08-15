@@ -5,7 +5,10 @@
 </head>
 <body>
     <a-scene>
-        <!-- Add your VR scene elements here -->
+        <!-- Camera and Cursor -->
+        <a-entity camera look-controls>
+            <a-cursor id="cursor" raycaster="objects: [clickable]"></a-cursor>
+        </a-entity>
 
         <!-- Clickable Button -->
         <a-plane id="button" color="blue" width="2" height="0.5" position="0 1.5 -3" clickable></a-plane>
