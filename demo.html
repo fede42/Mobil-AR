@@ -1,22 +1,19 @@
-<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
 <script>
   AFRAME.registerComponent("mylink", {
     init: function() {
-      this.el.addEventListener("click", (e) => {
-        window.location = this.data.href;
-      })
+    this.el.addEventListener("click", (e)=> {
+          window.location = this.data.href;
+    })
     }
   })
 </script>
 
-<a-scene cursor="rayOrigin: mouse">
-  <a-text color="black" position="1 1.6 -2" value="Click the text"
-          mylink="href: https://schatzkin.com;"></a-text>
-  <a-entity position="-1 1.6 -2" 
-            link="highlighted: true; 
-                  highlightedColor:#000000; backgroundColor: red; 
-                  href: https://schatzkin.com; titleColor: black; 
-                  title: click the image below.;
-                  image: https://i.imgur.com/wjobVTN.jpg;
-                  visualAspectEnabled: true"></a-entity>
-</a-scene>
+<body>
+
+  <a-scene cursor="rayOrigin: mouse">
+    <a-box position="0 0 -2" color="blue"></a-box>
+    <a-text color="black" position="1 1 -2" value="goToSchatzkin" mylink="href: https://schatzkin.com;"></a-text>
+    <a-entity position="0 1.6 -2" link="highlighted: true; highlightedColor:#000000; backgroundColor: red; href: https://schatzkin.com; titleColor: black; title: Back to website;image: https://i.imgur.com/wjobVTN.jpg  "></a-entity>
+
+  </a-scene>
