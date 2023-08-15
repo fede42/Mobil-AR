@@ -8,9 +8,14 @@
         <!-- Camera -->
         <a-entity id="camera" camera look-controls position="0 1.6 0"></a-entity>
 
-        <!-- Clickable Button -->
+        <!-- Clickable Button 
         <a-plane id="button" color="blue" width="2" height="0.5" position="0 1.5 -3" clickable></a-plane>
+        -->
+        <!-- Clickable Button -->
+        <a-entity position="0 1.5 -3">
+            <a-plane color="blue" width="2" height="0.5"></a-plane>
+            <a-link id="button" href="https://www.google.com"></a-link>
+        </a-entity>
     </a-scene>
-    <script src="your-script.js"></script>
 </body>
 </html>
