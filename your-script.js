@@ -3,8 +3,8 @@ AFRAME.registerComponent('clickable', {
         const button = this.el;
 
         button.addEventListener('click', () => {
-            // Open the URL in a new tab
-            window.open('https://www.google.com', '_blank');
+            // Redirect the current window to the URL
+            window.location.href = 'https://www.google.com';
         });
     }
 });
