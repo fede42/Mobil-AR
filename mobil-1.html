@@ -37,10 +37,33 @@
         let btnBack3D = button => {window.location.href = 'index-3D.html';}
     </script>
 </head>
-<body style="color: white;">
+
+<body style="background-color: #114A9B; color: white;">
+
+    <main class="container rounded mt-3 mb-5">
+        <button onclick="btnBack3D(this)" class="button-backTrans">&#8249</button>
+        <div class="row">
+          <div class="column">
+            <h4 style="padding-top: 3.6rem;">Mobil 1</h4>
+          </div>
+        </div>
+        <div class="row mt-3" style="background: linear-gradient(to top, #111217, #96a7bb)">
+          <div class="container-fluid"></div>
+          <model-viewer alt="Pussata" src="assets/MOBIL1.glb" ar="" environment-image="" poster="" shadow-intensity="1" camera-controls="" touch-action="pan-y" style="height: 640px" ar-status="not-presenting"></model-viewer>
+        </div>
+        <p class="text-light pt-4">
+          text
+        </p>
+        <div class="containerMain"
+                style="left: 50%; transform: translateX(-50%);">
+                <img src="assets/Mobil_logo_color_b_2.svg" alt="Logo">
+        </div>
+    </main>
+
+<!--
     <div class="d-flex flex-column align-items-center justify-content-between" style="background: linear-gradient(to top, #111217, #96a7bb)">
         <button onclick="btnBack3D(this)" class="button-backTrans">&#8249</button>
-        <h4 style="padding-top: 3.6rem;">Mobil 1</h5>
+        <h4 style="padding-top: 3.6rem;">Mobil 1</h4>
         <model-viewer
           src="assets/MOBIL1.glb"
           ar
@@ -55,7 +78,7 @@
                 style="position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);">
                 <img src="assets/Mobil_logo_color_b_2.svg" alt="Logo">
         </div>
-    </div>
+    </div>-->
 </body>
 
 </html>
