@@ -37,7 +37,59 @@
         let btnBack3D = button => {window.location.href = 'index-3D.html';}
     </script>
 </head>
-<body style="color: white;">
+<body style="background-color: #114A9B; color: white;">
+    <main class="container rounded mt-3 mb-5">
+        <button onclick="btnBack3D(this)" class="button-backTrans">&#8249</button>
+        <div class="row">
+          <div class="column text-center">
+            <h1 style="padding-top: 3.6rem;">Mobil SuperTM TRC-PRO</h1>
+          </div>
+        </div>
+        <div class="row mt-3" style="background: linear-gradient(to top, #111217, #96a7bb)">
+          <div class="container-fluid"></div>
+          <model-viewer src="assets/MOBIL1.glb" ar="" environment-image="" poster="" shadow-intensity="1" camera-controls=""
+            touch-action="pan-y" style="height: 640px" ar-status="not-presenting"></model-viewer>
+        </div>
+        <div class="col-md-6 pt-4">
+          <ul>
+            <li>Tecnología sintética para ofrecer extra protección y alta viscosidad</li>
+            <li>150,000 km de protección verificada</li>
+            <li>Tecnología de Moléculas TRCTM que se activan con el calor</li>
+            <li>Viscosidad óptima que sobrepasa las expectativas de protección</li>
+            <li>Ayuda a reducir depósitos y desgaste en el motor</li>
+          </ul>
+        </div>
+        <div class="row text-center p-2">
+          <a href="https://content.dps.mobil.com/mx-content/PDS/PDS-Mobil-Super-TRC-Pro.pdf">
+            <button type="button" class="btn btn-primary btn-lg">
+              <i class="fa fa-download"></i> 15W-40
+            </button>
+          </a>
+        </div>
+        <div class="row text-center p-2">
+        <a href="https://www.mobil.com/es-mx/passenger-vehicle-lube/pds/na-mx-mobil-super-trc--pro-20w50">
+          <button type="button" class="btn btn-primary btn-lg">
+            <i class="fa fa-download"></i> 20W-50
+          </button>
+        </a>
+        </div>
+        <div class="row p-2">
+          <div class="column">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                class="embed-responsive-item"
+                src="https://www.youtube.com/embed/9ZwKG1sHc1k"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center pt-3">
+          <img src="assets/Mobil_logo_color_b_2.svg" alt="Logo" style="height: 1rem;">
+        </div>
+    </main>
+
     <div class="d-flex flex-column align-items-center justify-content-between" style="background: linear-gradient(to top, #111217, #96a7bb)">
         <button onclick="btnBack3D(this)" class="button-backTrans">&#8249</button>
         <h4 style="padding-top: 3.6rem;">Mobil Super</h5>
