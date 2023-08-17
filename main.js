@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("target found");
         let scanPanel = document.getElementById("scanSection");
         scanPanel.setAttribute("hidden", "hidden");
-        let mobilSuperPanel = document.getElementById("mobilSuperSection");
+        let mobilSuperPanel = document.getElementById("panelMore");
         mobilSuperPanel.removeAttribute("hidden");
     });
     // detect target lost
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("target lost");
         let scanPanel = document.getElementById("scanSection");
         scanPanel.removeAttribute("hidden");
-        let mobilSuperPanel = document.getElementById("mobilSuperSection");
+        let mobilSuperPanel = document.getElementById("panelMore");
         mobilSuperPanel.setAttribute("hidden", "hidden");
     });
     // arError event triggered when something went wrong. Mostly browser compatbility issue
@@ -67,5 +67,9 @@ let btnBack3D = button => {
 }
 
 let btnForm = button => {
+    window.location.href = 'form.html';
+}
+
+let btnMore = button => {
     window.location.href = 'form.html';
 }
