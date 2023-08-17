@@ -24,6 +24,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
@@ -36,6 +38,27 @@
 </head>
 
 <body style='margin : 0px; overflow: hidden;'>
+    <!-- Cookies Popup -->
+    <div class="modal fade" id="cookiesModal" tabindex="-1" role="dialog" aria-labelledby="cookiesModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cookiesModalLabel">Aceptar Cookies</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Utilizamos cookies para garantizar que obtenga la mejor experiencia en nuestro sitio web. Al hacer clic en 'Aceptar', acepta nuestro uso de cookies.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Rechazar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="acceptCookies">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scan panel-->
     <section id="scanSection">
         <div class="d-flex flex-column align-items-center justify-content-between" style="height: 100vh;">
@@ -134,6 +157,15 @@
                 animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
         </a-entity>
     </a-scene>
+    <script>
+        $(document).ready(function() {
+            $('#cookiesModal').modal('show');
+            
+            $('#acceptCookies').click(function() {
+                // Here you can implement code to set cookies or perform other actions
+            });
+        });
+    </script>
 </body>
 
 </html>
