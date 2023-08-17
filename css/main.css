@@ -146,6 +146,7 @@ h2,
 h3,
 h4,
 h5,
-h6{
+h6,
+.btn {
   font-family: 'EMprint'; font-weight: 600; font-style: normal;
 }
