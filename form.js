@@ -46,7 +46,7 @@ form.addEventListener('submit', (event) => {
 
             // Reset the form fields
             form.reset();
-
+            window.location.href = 'index-3D.html';
             // Re-enable the submit button
             submitButton.disabled = false;
         })
@@ -55,3 +55,8 @@ form.addEventListener('submit', (event) => {
             submitButton.disabled = false;
         });
 });
+
+
+let btn3D = button => {
+    window.location.href = 'index-3D.html';
+}
