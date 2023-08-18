@@ -134,7 +134,7 @@
     </section>  
 
     <!-- minimal loader shown until image descriptors are loaded -->
-    <a-scene mindar-image="imageTargetSrc: assets/targets_Mobil.mind;" color-space="sRGB"
+    <a-scene mindar-image="imageTargetSrc: assets/targets.mind;" color-space="sRGB"
     renderer="antialias: true; colorManagement: true; physicallyCorrectLights: false;" vr-mode-ui="enabled: false"
     device-orientation-permission-ui="enabled: false">
         <a-assets>
@@ -152,7 +152,7 @@
                 animation="property: position; to: 0 0.1 -0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
         </a-entity>
 
-        <a-entity mindar-image-target="targetIndex: 0" id="target2">
+        <a-entity mindar-image-target="targetIndex: 0" id="target0">
             <a-gltf-model rotation="0 0 0 " position="0 0 -0.1" scale="1 1 1" src="#model1"
                 animation-mixer="clip: *; loop: repeat;"
                 animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
